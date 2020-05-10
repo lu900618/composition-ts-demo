@@ -1,14 +1,15 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    
+    <router-link to="counter">计数器</router-link>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <router-link to="todo">待办</router-link>
+    <router-view />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
-export default defineComponent({})
+export default defineComponent({});
 </script>
 
 <style>
