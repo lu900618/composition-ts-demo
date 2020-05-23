@@ -1,4 +1,5 @@
 import { createStore, GetterTree, MutationTree, ActionTree } from "vuex";
+import createPersistedState from "vuex-persistedstate";
 
 export interface ToDo {
   id: string;
@@ -58,6 +59,7 @@ const actions: ActionTree<State, State> = {
 };
 
 export default createStore({
+  plugins: [createPersistedState()],
   state,
   getters,
   mutations,
